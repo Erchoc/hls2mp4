@@ -1,0 +1,10 @@
+/target/
+/dist/
+/assets/*.tar.gz
+/.hls2mp4-cache/
+/.venv/
+/.tools/
+*.mp4
+*.ts
+*.log
+__pycache__/

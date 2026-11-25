@@ -1,0 +1,23 @@
+[package]
+name = "hls2mp4"
+version = "0.1.0"
+edition = "2021"
+description = "Zero-dependency CLI that losslessly converts m3u8 (HLS) streams to MP4"
+repository = "https://github.com/Erchoc/hls2mp4"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "cookies"] }
+regex = "1"
+url = "2"
+sha2 = "0.10"
+rayon = "1"
+tempfile = "3"
+flate2 = "1"
+tar = "0.4"
+
+[profile.release]
+strip = true
+lto = "thin"
